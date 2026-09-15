@@ -1,0 +1,11 @@
+interface:
+  display_name: "Mermail Inbound Lead Agent"
+  short_description: "Qualify inbound sales and partnership email with owner-supervised drafts"
+  default_prompt: "Use $mermail-inbound-lead-agent to scan my inbound leads mailbox for unread sales and partnership intros, classify each as hot/warm/cold/spam, draft warm-acks for review, and escalate hot leads privately—do not send without my exact approval."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "mermail"
+      description: "Mermail workspace and mailbox MCP server"
+      transport: "streamable_http"
+      url: "https://console.mermail.app/mcp"
